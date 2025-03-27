@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #d94862;
+  --second-color: #dcbda8;
+  --font-color: #3a3a3a;
+  --background-color: #fcfcfa;
+  --functionality-first-color: #8cc4bb;
+  --functionality-second-color: #b9c7ab;
+  --decorative-font: "Dancing Script", serif;
+  --general-font: "Gowun Batang", serif;
+}
+
+[data-theme="nuit"] {
+  --primary-color: #dcbda8;
+  --second-color: #d94862;
+  --font-color: #fcfcfa;
+  --background-color: #3a3a3a;
+}

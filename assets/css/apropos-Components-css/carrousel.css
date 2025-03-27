@@ -1,0 +1,16 @@
+/* --- Carrousel --- */
+.carrousel-nouveautes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carrousel-nouveautes img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+}

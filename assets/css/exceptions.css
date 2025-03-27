@@ -1,0 +1,16 @@
+@import url(animations.css);
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  animation-name: apparitionProgressive;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; /* L'élément reste au dernier stade de l'animation, ici opacite: 100% */
+}
+
+.disparitionProgressive {
+  animation-name: disparitionProgressive;
+  animation-duration: 2s;
+}

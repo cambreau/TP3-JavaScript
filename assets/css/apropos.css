@@ -1,0 +1,42 @@
+@import url(./apropos-Components-css/boiteModal.css);
+@import url(./apropos-Components-css/modeNuit.css);
+@import url(./apropos-Components-css/carrousel.css);
+@import url(./animations.css);
+
+main {
+  padding: 30px 100px;
+  position: relative;
+}
+
+p {
+  text-align: justify;
+}
+h3 {
+  margin: 20px 0 10px 0;
+}
+
+section {
+  margin: 20px 0;
+}
+
+.article-texte {
+  opacity: 0;
+}
+
+/* --- Bouton --- */
+.bouton {
+  width: 100px;
+  padding: 8px 15px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: bolder;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.bouton:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}

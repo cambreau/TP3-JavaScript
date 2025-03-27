@@ -1,0 +1,21 @@
+@import url(../animations.css);
+
+/* --- Boite Modale --- */
+body {
+  position: relative; /* Contexte pour positionner la modale */
+}
+
+#boite-modale {
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 800px;
+  height: 400px;
+  background-color: var(--second-color);
+  overflow: auto;
+  border-radius: 5px;
+  align-content: center;
+  justify-items: center;
+}

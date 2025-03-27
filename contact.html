@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un second tour" />
+    <meta
+      name="keywords"
+      content="jeux, jouets, livres, vêtements, enfants, prix abordables, produits de qualité, neufs, d'occasion, bon état, prix attractifs, budget, un second tour de jeux"
+    />
+    <meta name="author" content="Camille Breau" />
+    <title>Nous contacter - Un second tour de jeux</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <script type="module" src="./assets/js/navigation.js" defer></script>
+    <script type="module" src="./assets/js/contact.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="menu-retractable">
+        <nav aria-label="Menu naviguation principal">
+          <div id="menu-logo">
+            <img src="./assets/img/Icon/menu.svg" alt="Menu" id="menu" />
+          </div>
+        </nav>
+      </div>
+      <div id="titre">
+        <div id="logo">
+          <img src="./assets/img/Icon/logo.svg" alt="Logo de l'entreprise" />
+        </div>
+        <h1>Un second tour de jeux</h1>
+      </div>
+    </header>
+    <main id="contact">
+      <h2>Nous contacter</h2>
+      <form id="form-contact" action="contact.php" method="post">
+        <div class="barre-progression-conteneur">
+          <div class="barre-progression">
+            <div class="barre-progression-remplissage"></div>
+          </div>
+        </div>
+        <section id="section-1">
+          <h3>Vos coordonnées</h3>
+          <div id="nom-conteneur">
+            <div>
+              <label for="nom">Nom* :</label>
+              <input
+                id="nom"
+                type="text"
+                name="nom"
+                maxlength="20"
+                pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:-[A-Za-zÀ-ÖØ-öø-ÿ]+)*$"
+                placeholder="Entrer votre nom"
+                required
+              />
+            </div>
+            <p class="erreur">
+              Le nom n'est pas valide, il est obligatoire et doit uniquement
+              contenir des lettres.
+            </p>
+          </div>
+          <div id="prenom-conteneur">
+            <div>
+              <label for="prenom">Prenom* :</label>
+              <input
+                id="prenom"
+                type="text"
+                name="prenom"
+                maxlength="20"
+                pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:-[A-Za-zÀ-ÖØ-öø-ÿ]+)*$"
+                placeholder="Entrer votre prenom"
+                required
+              />
+            </div>
+            <p class="erreur">
+              Le prenom n'est pas valide, il est obligatoire et doit uniquement
+              contenir des lettres.
+            </p>
+          </div>
+          <div id="email-conteneur">
+            <div>
+              <label for="email">Adresse e-mail* :</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="ex: unSecondTourDeJeux@gmail.com"
+                required
+              />
+            </div>
+            <p class="erreur">Le format n'est pas valide.</p>
+          </div>
+          <div id="confirmation-email-conteneur">
+            <div>
+              <label for="confirmation-email">Confirmation e-mail* :</label>
+              <input
+                id="confirmation-email"
+                type="email"
+                name="confirmation-email"
+                placeholder="ex: unSecondTourDeJeux@gmail.com"
+                required
+              />
+            </div>
+            <p class="erreur">
+              Les deux adresses email ne sont pas identiques. Veuillez svp
+              saisir de nouveau.
+            </p>
+          </div>
+          <div id="telephone-conteneur">
+            <div>
+              <label for="telephone">Numéro de téléphone* :</label>
+              <input
+                id="telephone"
+                type="tel"
+                name="telephone"
+                placeholder="ex: 514-999-9999"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <p class="erreur">Le numero de telephone n'est pas valide.</p>
+          </div>
+          <div id="infolettre-conteneur">
+            <label for="infolettre">Je désire m'abonner à l'infolettre</label>
+            <input
+              type="checkbox"
+              id="infolettre"
+              name="infolettre"
+              aria-label="Abonnement à l'infolettre"
+            />
+          </div>
+        </section>
+        <section id="section-2">
+          <h3>Votre message</h3>
+          <div id="sujet-conteneur">
+            <label for="sujet">Sujet* :</label>
+            <select id="sujet" name="sujet" required>
+              <option value="" disabled selected>Sélectionnez un sujet</option>
+              <option value="Renseignements généraux">
+                Renseignements généraux
+              </option>
+              <option value="Un problème avec une commande">
+                Un problème avec une commande
+              </option>
+              <option value="Support technique">Support technique</option>
+            </select>
+            <p class="erreur">Veuillez choisir un sujet.</p>
+          </div>
+          <div id="message-conteneur">
+            <label for="message">Message* :</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Entrer votre message ici"
+              rows="5"
+              cols="50"
+              required
+            ></textarea>
+            <p class="erreur">Veuillez saisir votre message.</p>
+          </div>
+        </section>
+        <section id="section-3">
+          <h3>Résumé de votre demande</h3>
+          <p>Nom : <span data-champ="nom"></span></p>
+          <p>Prenom : <span data-champ="prenom"></span></p>
+          <p>Email: <span data-champ="email"></span></p>
+          <p>Telephone : <span data-champ="telephone"></span></p>
+          <p>
+            Abonnement à l'infolettre :
+            <span data-champ="infolettre"></span>
+          </p>
+          <p>Sujet : <span data-champ="sujet"></span></p>
+          <p>Message: <span data-champ="message"></span></p>
+        </section>
+        <div id="bouton">
+          <div>
+            <input
+              type="button"
+              value="Précédent"
+              data-direction="-1"
+              disabled
+            />
+            <input type="button" value="Suivant" data-direction="1" />
+          </div>
+          <input type="submit" value="Envoyer" disabled />
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div id="footer-nous-contacter">
+        <h3>Nous contacter :</h3>
+        <div id="contact-info">
+          <p>unSecondTourDeJeux@gmail.com</p>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="./assets/img/Icon/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="./assets/img/Icon/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+      <p>© 2025 Camille Breau</p>
+    </footer>
+  </body>
+</html>
