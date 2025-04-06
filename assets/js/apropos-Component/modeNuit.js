@@ -9,6 +9,10 @@ function init() {
   afficherModeNuit();
 }
 
+/**
+ * Fonction pour identifier l'élément cliqué et demander une modification
+ * @param {Event} evenement
+ */
 function auClicBouton(evenement) {
   //Etape 1: On verifie sur quel bouton on a cliqué.
   const bouton = evenement.target.closest("[data-mode-option]");
@@ -19,17 +23,30 @@ function auClicBouton(evenement) {
   }
 }
 
+/**
+ * La fonction est responsable de configurer le thème de la page
+ * en mode nuit ou en mode jour en fonction de la préférence stockée localement.
+ * Si aucune préférence n'est définie, elle applique le mode jour par défaut.
+ */
 function afficherModeNuit() {
   const optionMode = localStorage.getItem("modeNuit") || "jour";
   document.body.dataset.theme = optionMode;
   changerBoutons();
 }
 
+/**
+ * La fonction permet de changer le mode actuel (jour ou nuit)
+ * Elle sauvegarde la préférence dans le stockage local et applique immédiatement le nouveau mode.
+ * @param {string} option
+ */
 function modifierModeNuit(option) {
   localStorage.setItem("modeNuit", option);
   afficherModeNuit();
 }
 
+/**
+ * La fonction permet de mettre à jour l'affichage des bouton.
+ */
 function changerBoutons() {
   boutonsHTML.forEach(function (bouton) {
     const modeChoisi = localStorage.getItem("modeNuit") || "jour";

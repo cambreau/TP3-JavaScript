@@ -1,0 +1,11 @@
+Camille Breau
+
+La page À propos comprend une boîte modale, un carrousel d'images et un mode jour/nuit.
+
+Organisation : Pour organiser mon code, j’ai choisi d’utiliser des modules génériques. En effet, ces modules peuvent être réutilisables dans le site.
+J’ai d’abord écrit le code de façon directe, puis je suis revenu dessus pour identifier et supprimer les doublons afin de le rendre plus propre.
+
+Test et correction : Pour tester ma page, j’ai utilisé l’extension Live Server afin de visualiser les changements en temps réel. J’ai également utilisé des  à différents endroits de mon code pour suivre l’exécution et identifier les bugs.
+En complément, j’ai utilisé l’inspecteur de navigateur pour repérer les erreurs plus complexes et comprendre les problèmes de comportement.
+
+La totalité des animations est sur la page À propos.
